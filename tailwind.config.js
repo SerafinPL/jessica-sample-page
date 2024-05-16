@@ -8,14 +8,43 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+
     },
+    colors: {
+      transparent: 'transparent',
+      black: '#000000',
+      white: '#FFFFFF',
+      firstRow: {
+        A1: '#F6F7F8',
+        A3: '#C8CCD414',
+        A4: '#C8CCD41A',
+        A5: '#072635',
+        A7: '#E3E4E6',
+      },
+      secRow: {
+        A1: '#FFE6F1',
+        A2: '#E0F3FA',
+        A3: '#FFE6E9',
+        A5: '#F4F0FE',
+        A7: '#CBC8D4',
+      },
+      thrRow: {
+        A1: '#7E6CAB',
+        A2: '#8C6FE6',
+        A3: '#C26EB4',
+        A4: '#E66FD2',
+        A5: '#01F0D0',
+        A7: '#D8FCF7',
+      },
+      lastRow: {
+        A1: '#EDEDED',
+        A2: '#707070',
+      },
+
+      // ...
+    }
   },
   plugins: [
     require('preline/plugin'),
-],
+  ],
 };
