@@ -6,9 +6,7 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     './node_modules/preline/preline.js',
   ],
-  images: {
-    unoptimized: true,
-  },
+ 
   theme: {
     extend: {
 
@@ -40,7 +38,7 @@ module.exports = {
         A7: '#D8FCF7',
       },
       lastRow: {
-        A1: '#EDEDED',
+        borderGrey: '#EDEDED',
         A2: '#707070',
       },
 

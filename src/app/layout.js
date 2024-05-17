@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-firstRow-A1`}>
+      <body className={`${inter.className} bg-firstRow-A1 max-w-[85rem] mx-auto`}>
       <PrelineScript />
       <NavBar/>
       
