@@ -4,6 +4,8 @@ const nextConfig = {
         unoptimized: true,
       },
     output: 'export',
+      assetPrefix: '.',
+
 
 };
 

@@ -6,11 +6,8 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     './node_modules/preline/preline.js',
   ],
- 
-  theme: {
-    extend: {
 
-    },
+  theme: {
     colors: {
       transparent: 'transparent',
       black: '#000000',
