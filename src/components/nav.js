@@ -10,7 +10,7 @@ import calendarIco from "../../public/calendar.svg";
 
 
 const NavBar = () =>
-(<header className="flex flex-wrap lg:justify-start lg:flex-nowrap w-full bg-white text-sm py-4  radius70">
+(<header className="flex flex-wrap lg:justify-start lg:flex-nowrap  bg-white text-sm py-4 mx-3 my-3 radius70">
     <nav className="max-w-[85rem] w-full mx-auto px-4 flex flex-wrap basis-full items-center justify-between radius70" aria-label="Global">
         <Image src={techLogo} />
         <div className="lg:order-3 flex items-center gap-x-2">
