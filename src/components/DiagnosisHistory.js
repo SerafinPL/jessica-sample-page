@@ -12,7 +12,7 @@ const DiagnosisHistory = () => {
             <div className="mt18 col-span-full">
                 <CardTitle title='Diagnosis History'></CardTitle>
             </div>
-            <div className="mt18 col-span-full ">
+            <div className="mt18 col-span-full bg-secRow-fiolet rounded-xl">
                 <Suspense fallback={<Loading />}>
                     <BloodChart />
                 </Suspense>

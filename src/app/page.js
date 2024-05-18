@@ -6,7 +6,7 @@ import DiagnosticList from "@/components/DiagnosticList";
 import LabResults from "@/components/LabResults";
 
 
-export default function Home() {
+export default async function Home() {
 
 
 
