@@ -2,7 +2,7 @@
 
 import CardTitle from "@/components/CardTitle";
 import PatientListView from "./PatientListView";
-import search from "../../public/search.svg";
+import search from "@public/search.svg";
 import { patients } from "@/data/Patients";
 
 const PatientsList = (props) => {

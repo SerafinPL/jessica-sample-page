@@ -2,14 +2,14 @@ import Image from 'next/image';
 import NavButton from "./navButton";
 import NavUSer from './navUser';
 
-import techLogo from "../../../public/TestLogo.svg";
-import homeIco from "../../../public/home.svg";
-import groupIco from "../../../public/group.svg";
-import creditIco from "../../../public/credit.svg";
-import chatIco from "../../../public/chat.svg";
-import calendarIco from "../../../public/calendar.svg";
+import techLogo from "@public/TestLogo.svg";
+import homeIco from "@public/home.svg";
+import groupIco from "@public/group.svg";
+import creditIco from "@public/credit.svg";
+import chatIco from "@public/chat.svg";
+import calendarIco from "@public/calendar.svg";
 
-import drAvatar from "../../../public/senior-woman-doctor.png"
+import drAvatar from "@public/senior-woman-doctor.png"
 
 
 const NavBar = () =>

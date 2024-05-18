@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import more from "../../public/more_horiz.svg";
+import more from "@public//more_horiz.svg";
 
 const PatientListView = ({avatar, name, gender, age, active}) => (
     <div className={`w-full h-10 flex justify-between items-center h-20 p-4 pl-5 ${active ? 'bg-thrRow-active' : ''}`}>

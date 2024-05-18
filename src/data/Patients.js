@@ -1,16 +1,16 @@
 
-import avatar1 from "../../public/avatar1.png";
-import avatar2 from "../../public/avatar2.png";
-import avatar3 from "../../public/avatar3.png";
-import avatar4 from "../../public/avatar4.png";
-import avatar5 from "../../public/avatar5.png";
-import avatar6 from "../../public/avatar6.png";
-import avatar7 from "../../public/avatar7.png";
-import avatar8 from "../../public/avatar8.png";
-import avatar9 from "../../public/avatar9.png";
-import avatar10 from "../../public/avatar10.png";
-import avatar11 from "../../public/avatar11.png";
-import avatar12 from "../../public/avatar12.png";
+import avatar1 from "@public/avatar1.png";
+import avatar2 from "@public/avatar2.png";
+import avatar3 from "@public/avatar3.png";
+import avatar4 from "@public/avatar4.png";
+import avatar5 from "@public/avatar5.png";
+import avatar6 from "@public/avatar6.png";
+import avatar7 from "@public/avatar7.png";
+import avatar8 from "@public/avatar8.png";
+import avatar9 from "@public/avatar9.png";
+import avatar10 from "@public/avatar10.png";
+import avatar11 from "@public/avatar11.png";
+import avatar12 from "@public/avatar12.png";
 
 
 
