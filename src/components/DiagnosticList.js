@@ -3,7 +3,7 @@
 import CardTitle from "@/components/CardTitle";
 
 const DiagnosticList = () => (
-    <div class="flex flex-col bg-white shadow-sm rounded-xl p-4 md:p-5 ">
+    <div class="flex flex-col bg-white rounded-xl ">
         <CardTitle  title='Diagnostic List'></CardTitle>
     </div>
 );

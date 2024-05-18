@@ -17,7 +17,7 @@ module.exports = {
         A3: '#C8CCD414',
         A4: '#C8CCD41A',
         A5: '#072635',
-        A7: '#E3E4E6',
+        scrollFront: '#E3E4E6',
       },
       secRow: {
         A1: '#FFE6F1',
