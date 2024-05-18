@@ -15,16 +15,16 @@ import avatar12 from "@public/avatar12.png";
 
 
 export const patients = [
-    { avatar: avatar1, name: 'Emily Williams', gender: 'Female', age: 18 },
-    { avatar: avatar2, name: 'Ryan Johnson', gender: 'Male', age: 45 },
-    { avatar: avatar3, name: 'Brandon Mitchell', gender: 'Male', age: 36 },
-    { avatar: avatar4, name: 'Jessica Taylor', gender: 'Female', age: 28 },
-    { avatar: avatar5, name: 'Samantha Johnson', gender: 'Female', age: 56 },
-    { avatar: avatar6, name: 'Ashley Martinez', gender: 'Female', age: 54 },
-    { avatar: avatar7, name: 'Olivia Brown', gender: 'Female', age: 32 },
-    { avatar: avatar8, name: 'Tyler Davis', gender: 'Male', age: 19 },
-    { avatar: avatar9, name: 'Kevin Anderson', gender: 'Male', age: 30 },
-    { avatar: avatar10, name: 'Dylan Thompson', gender: 'Male', age: 36 },
-    { avatar: avatar11, name: 'Nathan Evans', gender: 'Male', age: 58 },
-    { avatar: avatar12, name: 'Mike Nolan', gender: 'Male', age: 31 },
+    { avatar: avatar1, name: 'Emily Williams', gender: 'Female', age: 18, active:false},
+    { avatar: avatar2, name: 'Ryan Johnson', gender: 'Male', age: 45, active:false},
+    { avatar: avatar3, name: 'Brandon Mitchell', gender: 'Male', age: 36, active:false},
+    { avatar: avatar4, name: 'Jessica Taylor', gender: 'Female', age: 28, active:true},
+    { avatar: avatar5, name: 'Samantha Johnson', gender: 'Female', age: 56, active:false},
+    { avatar: avatar6, name: 'Ashley Martinez', gender: 'Female', age: 54, active:false},
+    { avatar: avatar7, name: 'Olivia Brown', gender: 'Female', age: 32, active:false},
+    { avatar: avatar8, name: 'Tyler Davis', gender: 'Male', age: 19, active:false},
+    { avatar: avatar9, name: 'Kevin Anderson', gender: 'Male', age: 30, active:false},
+    { avatar: avatar10, name: 'Dylan Thompson', gender: 'Male', age: 36, active:false},
+    { avatar: avatar11, name: 'Nathan Evans', gender: 'Male', age: 58, active:false},
+    { avatar: avatar12, name: 'Mike Nolan', gender: 'Male', age: 31, active:false},
 ];

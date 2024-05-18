@@ -8,10 +8,10 @@ import { patients } from "@/data/Patients";
 const PatientsList = (props) => {
 
     const viewElements = patients.map(el => (
-        <PatientListView avatar={el.avatar} name={el.name} gender={el.gender} age={el.age} />
+        <PatientListView avatar={el.avatar} name={el.name} gender={el.gender} age={el.age} active={el.active}/>
     ))
 
-    const extendedElements = viewElements.concat(viewElements).concat(viewElements);
+    const extendedElements = viewElements.concat(viewElements).concat(viewElements).concat(viewElements);
 
     return (
         <div className="flex flex-col bg-white rounded-xl  max-h-[1054px] ">
