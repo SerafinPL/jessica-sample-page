@@ -2,19 +2,19 @@ import Image from 'next/image';
 import NavButton from "./navButton";
 import NavUSer from './navUser';
 
-import techLogo from "../../public/TestLogo.svg";
-import homeIco from "../../public/home.svg";
-import groupIco from "../../public/group.svg";
-import creditIco from "../../public/credit.svg";
-import chatIco from "../../public/chat.svg";
-import calendarIco from "../../public/calendar.svg";
+import techLogo from "../../../public/TestLogo.svg";
+import homeIco from "../../../public/home.svg";
+import groupIco from "../../../public/group.svg";
+import creditIco from "../../../public/credit.svg";
+import chatIco from "../../../public/chat.svg";
+import calendarIco from "../../../public/calendar.svg";
 
-import drAvatar from "../../public/senior-woman-doctor.png"
+import drAvatar from "../../../public/senior-woman-doctor.png"
 
 
 const NavBar = () =>
-(<header className="flex flex-wrap xl:justify-start xl:flex-nowrap  bg-white text-sm p-4 m-3 radius70">
-    <nav className="px-4 w-full flex flex-wrap basis-full items-center justify-between radius70" aria-label="Global">
+(<header className=" flex flex-wrap xl:justify-start xl:flex-nowrap items-center bg-white text-sm p-4 m18 h72 radius70">
+    <nav className=" w-full flex flex-wrap basis-full items-center justify-between radius70" aria-label="Global">
         <Image src={techLogo} />
         <div className="xl:order-3 flex items-center gap-x-2">
             <button type="button" className="xl:hidden hs-collapse-toggle p-2.5 inline-flex justify-center items-center gap-x-2 rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none " data-hs-collapse="#navbar-alignment" aria-controls="navbar-alignment" aria-label="Toggle navigation">
