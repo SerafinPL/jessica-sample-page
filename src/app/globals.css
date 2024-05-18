@@ -46,6 +46,14 @@
   border-radius: 70px;
 }
 
+.m18 {
+  margin: 18px;  
+}
+
+.h72{
+  height: 72px;
+}
+
 /* Character Styles */
 .card-title-24pt {
   font-family: var(--unnamed-font-family-manrope);
@@ -69,7 +77,7 @@
 }
 
 .body-emphasized-14pt {
-  font-family: var(--unnamed-font-family-manrope);
+  font-family: inherit;
   font-style: var(--unnamed-font-style-normal);
   font-weight: var(--unnamed-font-weight-bold);
   font-size: var(--unnamed-font-size-14);
@@ -79,7 +87,7 @@
 }
 
 .body-secondary-info-14pt {
-  font-family: var(--unnamed-font-family-manrope);
+  font-family: inherit;
   font-style: var(--unnamed-font-style-normal);
   font-weight: var(--unnamed-font-weight-normal);
   font-size: var(--unnamed-font-size-14);
