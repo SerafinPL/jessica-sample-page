@@ -1,8 +1,6 @@
 
 
 import CardTitle from "@/components/CardTitle";
-
-
 import search from "../../public/search.svg";
 
 const PatientsList = (props) => (

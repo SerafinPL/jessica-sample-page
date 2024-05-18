@@ -7,7 +7,7 @@ import NavBar from "@/components/Nav/nav";
 
 
 const monrope = Manrope({
-  weight: ['400', '700'],
+  weight: ['400', '800'],
   subsets: ['latin'],
 });
 
