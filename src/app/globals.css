@@ -50,13 +50,22 @@
   margin: 18px;  
 }
 
+.mt18 {
+  margin-top: 18px;  
+}
+
+.px18 {
+  padding-left: 18px;  
+  padding-right: 18px;  
+}
+
 .h72{
   height: 72px;
 }
 
 /* Character Styles */
 .card-title-24pt {
-  font-family: var(--unnamed-font-family-manrope);
+  font-family: inherit;
   font-style: var(--unnamed-font-style-normal);
   font-weight: var(--unnamed-font-weight-800);
   font-size: var(--unnamed-font-size-24);
@@ -66,7 +75,7 @@
 }
 
 .inner-card-title-18pt {
-  font-family: var(--unnamed-font-family-manrope);
+  font-family: inherit;
   font-style: var(--unnamed-font-style-normal);
   font-weight: var(--unnamed-font-weight-bold);
   font-size: var(--unnamed-font-size-18);
@@ -97,7 +106,7 @@
 }
 
 .body-regular-14 {
-  font-family: var(--unnamed-font-family-manrope);
+  font-family: inherit;
   font-style: var(--unnamed-font-style-normal);
   font-weight: var(--unnamed-font-weight-normal);
   font-size: var(--unnamed-font-size-14);

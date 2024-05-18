@@ -2,8 +2,8 @@
 
 import Image from 'next/image'; 
 
-import more from "../../public/more_vert.svg";
-import settings from "../../public/settings.svg";
+import more from "../../../public/more_vert.svg";
+import settings from "../../../public/settings.svg";
 
 
 
