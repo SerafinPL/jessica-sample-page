@@ -23,7 +23,7 @@ module.exports = {
         A1: '#FFE6F1',
         A2: '#E0F3FA',
         A3: '#FFE6E9',
-        A5: '#F4F0FE',
+        fiolet: '#F4F0FE',
         A7: '#CBC8D4',
       },
       thrRow: {
