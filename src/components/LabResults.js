@@ -2,10 +2,10 @@
 
 import CardTitle from "@/components/CardTitle";
 
-const DiagnosticList = () => (
+const LabResults = () => (
     <div class="flex flex-col bg-white rounded-xl ">
-        <CardTitle  title='Diagnostic List'></CardTitle>
+        <CardTitle  title='Lab Results'></CardTitle>
     </div>
 );
 
-export default DiagnosticList
+export default LabResults

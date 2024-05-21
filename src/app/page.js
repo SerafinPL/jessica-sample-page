@@ -1,10 +1,15 @@
 import Image from "next/image";
 
-import PatientsList from "@/components/PatientsList";
+import PatientsList from "@/components/PatientsList/PatientsList";
 import DiagnosisHistory from "@/components/DiagnosisHistory";
+import DiagnosticList from "@/components/DiagnosticList";
+import LabResults from "@/components/LabResults";
 
 
-export default function Home() {
+export default async function Home() {
+
+
+
   return (
 
 
@@ -13,10 +18,12 @@ export default function Home() {
         <PatientsList />
       </div>
       <div className="col-span-2 mt18">
-        <DiagnosisHistory />
+        <DiagnosisHistory patientId={4}/>
+        <DiagnosticList />
       </div>
       <div className="">
         <PatientsList />
+        <LabResults />
       </div>
     </div>
   );
