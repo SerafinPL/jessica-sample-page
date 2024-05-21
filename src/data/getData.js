@@ -12,3 +12,13 @@ export const getPatients = async () => {
     }, err => console.log(err))
 
 }
+
+export const getOnePatient = async (name) => {
+
+    let auth = btoa(`${process.env.USER_LOGIN}:${process.env.PASS}`);
+
+    return axios.get(process.env.PATH_URL,{headers:{'Authorization': `Basic ${auth}`}}).then(res => {
+        return res.data.find(patient => patient.name == name);
+    }, err => console.log(err))
+
+}
