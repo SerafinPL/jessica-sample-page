@@ -3,11 +3,11 @@
 import Image from 'next/image';
 import Loading from './Loading';
 
-import { getJesica } from '@/data/getData';
+import { getPatients } from '@/data/getData';
 
 const BloodChart = async () => {
 
-    let serwerData = await getJesica().then(res => {
+    let serwerData = await getPatients().then(res => {
         console.log(res)
         return res
     });
