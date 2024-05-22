@@ -28,9 +28,9 @@ module.exports = {
       },
       thrRow: {
         A1: '#7E6CAB',
-        A2: '#8C6FE6',
+        chartBlue: '#8C6FE6',
         A3: '#C26EB4',
-        A4: '#E66FD2',
+        chartPink: '#E66FD2',
         active: '#01F0D0',
         A7: '#D8FCF7',
       },

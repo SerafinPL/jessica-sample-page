@@ -6,11 +6,9 @@ import Chart from "react-apexcharts";
 const PatientChart = (props) => {
     const series = [
         {
-            name: 'diastolic',
             data: props.data.diagnosis_history.map(els => (`${+els.blood_pressure.diastolic.value}`)),
         },
         {
-            name: 'systolic',
             data: props.data.diagnosis_history.map(els => (`${+els.blood_pressure.systolic.value}`)),
         }
     ];
