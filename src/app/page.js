@@ -1,8 +1,8 @@
 import Image from "next/image";
 
 import PatientsList from "@/components/PatientsList/PatientsList";
-import DiagnosisHistory from "@/components/DiagnosisHistory";
-import DiagnosticList from "@/components/DiagnosticList";
+import DiagnosisHistory from "@/components/Diagnosis/DiagnosisHistory";
+import DiagnosticList from "@/components/Diagnosis/DiagnosticList";
 import LabResults from "@/components/LabResults";
 
 
