@@ -15,7 +15,8 @@ const DiagnosisHistory = () => {
                 <CardTitle title='Diagnosis History'></CardTitle>
             </div>
             <div className="mt18 col-span-full bg-secRow-fiolet rounded-xl">
-                <div className={`w-full flex justify-center items-center `} >
+            <p className="inner-card-title-22pt m-1">Blood Pressure</p>
+                <div className={`w-full flex justify-center items-start `} >
                     <BloodChart />
                     <ChartLegend />
                 </div>

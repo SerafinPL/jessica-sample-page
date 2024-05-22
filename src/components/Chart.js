@@ -18,6 +18,9 @@ const PatientChart = (props) => {
         chart: {
             id: "basic-bar",
         },
+        legend: {
+            show: false
+          },
         stroke: {
             curve: 'smooth',
             width: 2,

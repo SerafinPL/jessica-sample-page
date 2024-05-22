@@ -24,7 +24,7 @@ module.exports = {
         A2: '#E0F3FA',
         A3: '#FFE6E9',
         fiolet: '#F4F0FE',
-        A7: '#CBC8D4',
+        chartGrey: '#CBC8D4',
       },
       thrRow: {
         A1: '#7E6CAB',
