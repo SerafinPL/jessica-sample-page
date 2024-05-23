@@ -32,6 +32,7 @@
   --unnamed-font-weight-bold: bold;
   --unnamed-font-size-14: 14px;
   --unnamed-font-size-18: 18px;
+  --unnamed-font-size-22: 22px;
   --unnamed-font-size-24: 24px;
   --unnamed-character-spacing-0: 0px;
   --unnamed-line-spacing-19: 19px;
@@ -80,6 +81,16 @@
   font-weight: var(--unnamed-font-weight-bold);
   font-size: var(--unnamed-font-size-18);
   line-height: var(--unnamed-line-spacing-24);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-072635);
+  text-transform: var(--unnamed-text-transform-titlecase);
+}
+
+.inner-card-title-22pt {
+  font-family: inherit;
+  font-weight: var(--unnamed-font-weight-bold);
+  font-size: var(--unnamed-font-size-22);
+  line-height: var(--unnamed-line-spacing-19);
   letter-spacing: var(--unnamed-character-spacing-0);
   color: var(--unnamed-color-072635);
   text-transform: var(--unnamed-text-transform-titlecase);

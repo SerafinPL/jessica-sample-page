@@ -1,8 +1,10 @@
 import { Suspense } from "react";
 
 import CardTitle from "@/components/CardTitle";
-import BloodChart from "./BloodChart";
-import Loading from './Loading';
+import BloodChart from "../BloodChart";
+import ChartLegend from "../Chart/ChartLegend";
+import ChartCard from "../Chart/ChartCard";
+import Loading from '../Loading';
 
 
 const DiagnosisHistory = () => {
@@ -13,9 +15,11 @@ const DiagnosisHistory = () => {
                 <CardTitle title='Diagnosis History'></CardTitle>
             </div>
             <div className="mt18 col-span-full bg-secRow-fiolet rounded-xl">
-                <Suspense fallback={<Loading />}>
+            <p className="inner-card-title-22pt m-1">Blood Pressure</p>
+                <div className={`w-full flex justify-center items-start `} >
                     <BloodChart />
-                </Suspense>
+                    <ChartLegend />
+                </div>
 
             </div>
             <div className="">
