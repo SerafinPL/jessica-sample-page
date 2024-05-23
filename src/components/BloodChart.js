@@ -13,7 +13,6 @@ const BloodChart = async () => {
     });
 
     return (
-
         <Suspense fallback={<Loading />}>
             <PatientChart data={serwerData && serwerData} />
         </Suspense>
