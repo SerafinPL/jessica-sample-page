@@ -7,9 +7,8 @@ import HeartBPM from "@public/HeartBPM.svg";
 import CardTitle from "@/components/CardTitle";
 import BloodChart from "../Chart/BloodChart";
 import ChartLegend from "../Chart/ChartLegend";
-import ChartCard from "../Chart/ChartCard";
-import Loading from '../Loading';
 import { getArrow } from "@/data/getData";
+import LevelView from "../LevelsView";
 
 
 const DiagnosisHistory = (props) => {
@@ -22,28 +21,29 @@ const DiagnosisHistory = (props) => {
             <div className="mt18 col-span-full bg-secRow-violet mx18 rounded-xl p-4 ">
                 <p className="inner-card-title-22pt  ">Blood Pressure</p>
                 <div className={`w-full flex justify-center items-start `} >
-                    <BloodChart serwerData={props.serwerData && props.serwerData}/>
-                    <ChartLegend serwerData={props.serwerData && props.serwerData}/>
+                    <BloodChart serwerData={props.serwerData && props.serwerData} />
+                    <ChartLegend serwerData={props.serwerData && props.serwerData} />
                 </div>
             </div>
 
             <div className="rounded-xl bg-secRow-cardBlue ml18">
                 <Image src={respiratoryRate} className='m-4' />
-                <p className="card-medium-title-16 ml-4">Respiratory Rate</p>   
+                <p className="card-medium-title-16 ml-4">Respiratory Rate</p>
                 <p className="card-extraBold-title-30 ml-4">{props.serwerData && props.serwerData.diagnosis_history[0].respiratory_rate.value} bpm</p>
-                <p className="body-regular-14 ml-4">{props.serwerData && getArrow(props.serwerData.diagnosis_history[0].respiratory_rate.levels)} {props.serwerData && props.serwerData.diagnosis_history[0].respiratory_rate.levels}</p>
+                <LevelView levels={props.serwerData.diagnosis_history[0].respiratory_rate.levels} />
             </div>
             <div className="rounded-xl bg-secRow-cardPink ">
                 <Image src={temperature} className='m-4' />
-                <p className="card-medium-title-16 ml-4">Temperature</p>   
+                <p className="card-medium-title-16 ml-4">Temperature</p>
                 <p className="card-extraBold-title-30 ml-4">{props.serwerData && props.serwerData.diagnosis_history[0].temperature.value}°F</p>
-                <p className="body-regular-14 ml-4">{props.serwerData && getArrow(props.serwerData.diagnosis_history[0].temperature.levels)} {props.serwerData && props.serwerData.diagnosis_history[0].temperature.levels}</p>
+                <LevelView levels={props.serwerData.diagnosis_history[0].temperature.levels} />
             </div>
             <div className="rounded-xl bg-secRow-cardViolet mr18">
                 <Image src={HeartBPM} className='m-4' />
-                <p className="card-medium-title-16 ml-4">Heart Rate</p>   
+                <p className="card-medium-title-16 ml-4">Heart Rate</p>
                 <p className="card-extraBold-title-30 ml-4">{props.serwerData && props.serwerData.diagnosis_history[0].heart_rate.value} bpm</p>
-                <p className="body-regular-14 ml-4 mb-4">{props.serwerData && getArrow(props.serwerData.diagnosis_history[0].heart_rate.levels)} {props.serwerData &&  props.serwerData.diagnosis_history[0].heart_rate.levels}</p>
+                <LevelView levels={props.serwerData.diagnosis_history[0].heart_rate.levels} />
+
             </div>
         </div>
     );
