@@ -1,8 +1,6 @@
 import { Suspense } from "react";
 import Loading from "../Loading";
 
-
-
 import CardTitle from "@/components/CardTitle";
 import DiagnosticListView from "./DiagnosticView";
 

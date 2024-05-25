@@ -11,7 +11,7 @@ import ChartCard from "../Chart/ChartCard";
 import Loading from '../Loading';
 
 
-const DiagnosisHistory = async (props) => {
+const DiagnosisHistory = (props) => {
     return (
         <div className="w-full grid grid-cols-3 gap-5  bg-white rounded-xl pb-5 mb-8 diagnosis-height">
 

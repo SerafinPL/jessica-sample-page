@@ -1,13 +1,3 @@
-'use client'
-
-import Image from 'next/image';
-
-import { Suspense } from "react";
-import Loading from "../Loading";
-
-import { getOnePatient } from '@/data/getData';
-
-import more from "@public/more_horiz.svg";
 
 const DiagnosticListView = ({ serwerData }) => {
 
