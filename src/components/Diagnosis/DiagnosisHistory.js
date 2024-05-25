@@ -5,7 +5,7 @@ import temperature from "@public/temperature.svg";
 import HeartBPM from "@public/HeartBPM.svg";
 
 import CardTitle from "@/components/CardTitle";
-import BloodChart from "../BloodChart";
+import BloodChart from "../Chart/BloodChart";
 import ChartLegend from "../Chart/ChartLegend";
 import ChartCard from "../Chart/ChartCard";
 import Loading from '../Loading';

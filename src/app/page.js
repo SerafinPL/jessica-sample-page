@@ -1,7 +1,6 @@
 
 import { getOnePatient, getPatients } from '@/data/getData';
 
-
 import PatientsList from "@/components/PatientsList/PatientsList";
 import PatientsInfo from '@/components/PatientInfo';
 import DiagnosisHistory from "@/components/Diagnosis/DiagnosisHistory";
@@ -32,7 +31,7 @@ export default async function Home() {
         <DiagnosticList serwerData={serwerData && serwerData} />
       </div>
       <div className="">
-        <PatientsInfo />
+        <PatientsInfo user={serwerData && serwerData}/>
         <LabResults serwerData={serwerData && serwerData} />
       </div>
     </div>
