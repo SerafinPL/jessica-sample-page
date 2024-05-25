@@ -15,6 +15,7 @@ const PatientsList = (props) => {
 
     return (
         <div className="flex flex-col bg-white rounded-xl  max-h-[1054px] ">
+            
             <CardTitle ico={search} title='Patients'></CardTitle>
             <div className="overflow-y-auto [&::-webkit-scrollbar]:w-1.5
                 [&::-webkit-scrollbar-track]:bg-firstRow-scrollFront
