@@ -5,7 +5,7 @@ import NavBar from "@/components/Nav/nav";
 
 
 const monrope = Manrope({
-  weight: ['400', '800'],
+  weight: ['400', '500','800'],
   subsets: ['latin'],
 });
 
@@ -17,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${monrope.className} bg-firstRow-A1 max-w-[1600px] mx-auto`}>
+      <body className={`${monrope.className} bg-firstRow-A1 max-w-[1600px] mx-auto `}>
         <PrelineScript />
         <NavBar />
         {children}

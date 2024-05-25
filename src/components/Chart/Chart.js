@@ -1,6 +1,5 @@
 'use client'
 
-
 import Chart from "react-apexcharts";
 
 const PatientChart = (props) => {
