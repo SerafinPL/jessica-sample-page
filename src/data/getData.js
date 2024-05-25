@@ -30,8 +30,8 @@ export const getOnePatient = async (name) => {
 
 export const getArrow = (arrow) => {
     return arrow === 'Lower than Average' ?
-        ArrowDown :
-        arrow === 'Lower than Higher' ?
-            ArrowUp :
-            undefined;
+        <Image src={ArrowDown} className="inline"/> :
+        arrow === 'Higher than Average' ?
+            <Image src={ArrowUp} className="inline"/> :
+            '';
 }
