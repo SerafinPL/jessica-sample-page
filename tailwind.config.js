@@ -20,10 +20,10 @@ module.exports = {
         scrollFront: '#E3E4E6',
       },
       secRow: {
-        A1: '#FFE6F1',
-        A2: '#E0F3FA',
-        A3: '#FFE6E9',
-        fiolet: '#F4F0FE',
+        cardBlue: '#FFE6F1',
+        cardPink: '#E0F3FA',
+        cardViolet: '#FFE6E9',
+        violet: '#F4F0FE',
         chartGrey: '#CBC8D4',
       },
       thrRow: {
