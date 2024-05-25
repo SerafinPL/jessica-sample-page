@@ -17,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${monrope.className} bg-firstRow-A1 max-w-[1600px] mx-auto`}>
+      <body className={`${monrope.className} bg-firstRow-A1 max-w-[1600px] mx-auto max-h-[1195px]`}>
         <PrelineScript />
         <NavBar />
         {children}

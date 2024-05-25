@@ -1,4 +1,8 @@
 import { Suspense } from "react";
+import Image from 'next/image';
+import respiratoryRate from "@public/respiratoryRate.svg";
+import temperature from "@public/temperature.svg";
+import HeartBPM from "@public/HeartBPM.svg";
 
 import CardTitle from "@/components/CardTitle";
 import BloodChart from "../BloodChart";
@@ -9,7 +13,7 @@ import Loading from '../Loading';
 
 const DiagnosisHistory = async () => {
     return (
-        <div className="w-full grid grid-cols-3 gap-4 px18 bg-white rounded-xl mb-8">
+        <div className="w-full grid grid-cols-3 gap-5 px18 bg-white rounded-xl pb-5 mb-8">
 
             <div className="mt18 col-span-full">
                 <CardTitle title='Diagnosis History'></CardTitle>
@@ -21,16 +25,15 @@ const DiagnosisHistory = async () => {
                     <ChartLegend />
                 </div>
             </div>
-            <div className="grid grid-cols-3">
-                <div className="rounded-xl bg-secRow-cardBlue">
 
-                </div>
-                <div className="rounded-xl bg-secRow-cardPink">
-
-                </div>
-                <div className="rounded-xl bg-secRow-cardViolet">
-
-                </div>
+            <div className="rounded-xl bg-secRow-cardBlue">
+                <Image src={respiratoryRate} className='mb-2.5' />
+            </div>
+            <div className="rounded-xl bg-secRow-cardPink">
+                <Image src={temperature} className='mb-2.5' />
+            </div>
+            <div className="rounded-xl bg-secRow-cardViolet">
+                <Image src={HeartBPM} className='' />
             </div>
         </div>
     );

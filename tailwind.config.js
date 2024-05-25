@@ -20,9 +20,9 @@ module.exports = {
         scrollFront: '#E3E4E6',
       },
       secRow: {
-        cardBlue: '#FFE6F1',
-        cardPink: '#E0F3FA',
-        cardViolet: '#FFE6E9',
+        cardViolet: '#FFE6F1',
+        cardBlue: '#E0F3FA',
+        cardPink: '#FFE6E9',
         violet: '#F4F0FE',
         chartGrey: '#CBC8D4',
       },

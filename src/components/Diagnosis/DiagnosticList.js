@@ -1,5 +1,7 @@
 import { Suspense } from "react";
 import Loading from "../Loading";
+import Image from 'next/image';
+
 
 import { getOnePatient } from '@/data/getData';
 
