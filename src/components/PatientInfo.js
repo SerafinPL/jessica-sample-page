@@ -1,9 +1,6 @@
 import Image from 'next/image';
 
-
-
-
-const PatientsInfo = ({ user }) => {
+const PatientInfo = ({ user }) => {
 
     return (
         <div className="flex flex-col bg-white rounded-xl  h-[740px] ">
@@ -16,4 +13,4 @@ const PatientsInfo = ({ user }) => {
     )
 };
 
-export default PatientsInfo
+export default PatientInfo
