@@ -1,11 +1,19 @@
 
+import { getOnePatient } from '@/data/getData';
+
+
 import PatientsList from "@/components/PatientsList/PatientsList";
 import DiagnosisHistory from "@/components/Diagnosis/DiagnosisHistory";
 import DiagnosticList from "@/components/Diagnosis/DiagnosticList";
 import LabResults from "@/components/LabResults";
 
+const reavlidate = 1800;
 
 export default async function Home() {
+
+  let serwerData = await getOnePatient('Jessica Taylor').then(res => {
+    return res
+  });
 
   return (
 
@@ -14,12 +22,12 @@ export default async function Home() {
         <PatientsList />
       </div>
       <div className="col-span-2 mt18">
-        <DiagnosisHistory patientId={4}/>
-        <DiagnosticList />
+        <DiagnosisHistory serwerData={serwerData && serwerData} />
+        <DiagnosticList serwerData={serwerData && serwerData} />
       </div>
       <div className="">
         <PatientsList />
-        <LabResults />
+        <LabResults serwerData={serwerData && serwerData} />
       </div>
     </div>
   );

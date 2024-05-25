@@ -11,7 +11,7 @@ import ChartCard from "../Chart/ChartCard";
 import Loading from '../Loading';
 
 
-const DiagnosisHistory = async () => {
+const DiagnosisHistory = async (props) => {
     return (
         <div className="w-full grid grid-cols-3 gap-5 px18 bg-white rounded-xl pb-5 mb-8">
 
@@ -21,19 +21,19 @@ const DiagnosisHistory = async () => {
             <div className="mt18 col-span-full bg-secRow-violet rounded-xl p-4 ">
                 <p className="inner-card-title-22pt  ">Blood Pressure</p>
                 <div className={`w-full flex justify-center items-start `} >
-                    <BloodChart />
-                    <ChartLegend />
+                    <BloodChart serwerData={props.serwerData && props.serwerData}/>
+                    <ChartLegend serwerData={props.serwerData && props.serwerData}/>
                 </div>
             </div>
 
             <div className="rounded-xl bg-secRow-cardBlue">
-                <Image src={respiratoryRate} className='mb-2.5' />
+                <Image src={respiratoryRate} className='m-4' />
             </div>
             <div className="rounded-xl bg-secRow-cardPink">
-                <Image src={temperature} className='mb-2.5' />
+                <Image src={temperature} className='m-4' />
             </div>
             <div className="rounded-xl bg-secRow-cardViolet">
-                <Image src={HeartBPM} className='' />
+                <Image src={HeartBPM} className='m-4' />
             </div>
         </div>
     );

@@ -6,15 +6,11 @@ import Loading from './Loading';
 import { getOnePatient } from '@/data/getData';
 import PatientChart from "./Chart/Chart";
 
-const BloodChart = async () => {
-
-    let serwerData = await getOnePatient('Jessica Taylor').then(res => {
-        return res
-    });
+const BloodChart = async (props) => {
 
     return (
         <Suspense fallback={<Loading />}>
-            <PatientChart data={serwerData && serwerData} />
+            <PatientChart data={props.serwerData && props.serwerData} />
         </Suspense>
     )
 };
