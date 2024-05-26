@@ -32,7 +32,7 @@ export default async function Home() {
       </div>
       <div className="">
         <PatientInfo user={serwerData && serwerData}/>
-        <LabResults serwerData={serwerData && serwerData} />
+        <LabResults  />
       </div>
     </div>
   );

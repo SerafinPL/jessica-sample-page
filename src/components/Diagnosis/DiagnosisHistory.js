@@ -26,26 +26,8 @@ const DiagnosisHistory = (props) => {
                     <ChartLegend serwerData={props.serwerData && props.serwerData} />
                 </div>
             </div>
-<DiagnosisStats/>
-            {/* <div className="rounded-xl bg-secRow-cardBlue ml18">
-                <Image src={respiratoryRate} className='m-4' />
-                <p className="card-medium-title-16 ml-4">Respiratory Rate</p>
-                <p className="card-extraBold-title-30 ml-4">{props.serwerData && props.serwerData.diagnosis_history[0].respiratory_rate.value} bpm</p>
-                <LevelView levels={props.serwerData.diagnosis_history[0].respiratory_rate.levels} />
-            </div>
-            <div className="rounded-xl bg-secRow-cardPink ">
-                <Image src={temperature} className='m-4' />
-                <p className="card-medium-title-16 ml-4">Temperature</p>
-                <p className="card-extraBold-title-30 ml-4">{props.serwerData && props.serwerData.diagnosis_history[0].temperature.value}°F</p>
-                <LevelView levels={props.serwerData.diagnosis_history[0].temperature.levels} />
-            </div>
-            <div className="rounded-xl bg-secRow-cardViolet mr18">
-                <Image src={HeartBPM} className='m-4' />
-                <p className="card-medium-title-16 ml-4">Heart Rate</p>
-                <p className="card-extraBold-title-30 ml-4">{props.serwerData && props.serwerData.diagnosis_history[0].heart_rate.value} bpm</p>
-                <LevelView levels={props.serwerData.diagnosis_history[0].heart_rate.levels} />
-
-            </div> */}
+            <DiagnosisStats />
+  
         </div>
     );
 }
