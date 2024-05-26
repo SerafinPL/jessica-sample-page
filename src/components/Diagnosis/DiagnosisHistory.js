@@ -9,6 +9,7 @@ import BloodChart from "../Chart/BloodChart";
 import ChartLegend from "../Chart/ChartLegend";
 import { getArrow } from "@/data/getData";
 import LevelView from "../LevelsView";
+import DiagnosisStats from "./DiagnosisStats";
 
 
 const DiagnosisHistory = (props) => {
@@ -25,8 +26,8 @@ const DiagnosisHistory = (props) => {
                     <ChartLegend serwerData={props.serwerData && props.serwerData} />
                 </div>
             </div>
-
-            <div className="rounded-xl bg-secRow-cardBlue ml18">
+<DiagnosisStats/>
+            {/* <div className="rounded-xl bg-secRow-cardBlue ml18">
                 <Image src={respiratoryRate} className='m-4' />
                 <p className="card-medium-title-16 ml-4">Respiratory Rate</p>
                 <p className="card-extraBold-title-30 ml-4">{props.serwerData && props.serwerData.diagnosis_history[0].respiratory_rate.value} bpm</p>
@@ -44,7 +45,7 @@ const DiagnosisHistory = (props) => {
                 <p className="card-extraBold-title-30 ml-4">{props.serwerData && props.serwerData.diagnosis_history[0].heart_rate.value} bpm</p>
                 <LevelView levels={props.serwerData.diagnosis_history[0].heart_rate.levels} />
 
-            </div>
+            </div> */}
         </div>
     );
 }
