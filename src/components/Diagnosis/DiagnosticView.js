@@ -1,5 +1,5 @@
 
-const DiagnosticListView = ({ serwerData }) => {
+const ListView = ({ serwerData }) => {
 
     const listElements = serwerData.map(el => {
         return (<div className={`w-full grid grid-cols-7 h-full pt-4 pl-5 `}>
@@ -21,4 +21,4 @@ const DiagnosticListView = ({ serwerData }) => {
     )
 };
 
-export default DiagnosticListView
+export default ListView

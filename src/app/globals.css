@@ -76,6 +76,11 @@
   margin-right: 18px;  
 }
 
+.mx74 {
+  margin-left: 74px;  
+  margin-right: 74px;  
+}
+
 
 .px18 {
   padding-left: 18px;  
@@ -148,6 +153,30 @@
   line-height: var(--line-spacing-19);
   letter-spacing: var(--character-spacing-0);
   color: var(--color-072635);
+}
+
+.body-title-14 {
+  font-family: inherit;
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-14);
+  line-height: var(--line-spacing-19);
+  letter-spacing: var(--character-spacing-0);
+  color: var(--color-072635);
+  text-transform: var(--text-transform-titlecase);
+
+}
+
+.body-title-bold-14 {
+  font-family: inherit;
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-14);
+  line-height: var(--line-spacing-19);
+  letter-spacing: var(--character-spacing-0);
+  color: var(--color-072635);
+  text-transform: var(--text-transform-titlecase);
+
 }
 
 .card-medium-title-16{

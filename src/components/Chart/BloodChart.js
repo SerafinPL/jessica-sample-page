@@ -1,8 +1,8 @@
 import { Suspense } from "react";
 
-import Loading from './Loading';
+import Loading from '../Loading';
 
-import PatientChart from "./Chart/Chart";
+import PatientChart from "./Chart";
 
 const BloodChart = async (props) => {
 
