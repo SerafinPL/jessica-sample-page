@@ -1,5 +1,5 @@
 
-import { getArrow } from "@/data/getData";
+import { getArrow } from "@/components/arrows"
 
 
 const LevelsView = (props) => {

@@ -1,7 +1,7 @@
 
 import { Suspense } from "react";
 import Loading from "./Loading";
-import { getArrow, getOnePatient } from "@/data/getData";
+import { getOnePatient } from "@/data/getData";
 
 
 import CardTitle from "@/components/CardTitle";

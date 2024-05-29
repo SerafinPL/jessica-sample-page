@@ -1,18 +1,15 @@
-import { Suspense } from "react";
-import Image from 'next/image';
-import respiratoryRate from "@public/respiratoryRate.svg";
-import temperature from "@public/temperature.svg";
-import HeartBPM from "@public/HeartBPM.svg";
 
 import CardTitle from "@/components/CardTitle";
 import BloodChart from "../Chart/BloodChart";
 import ChartLegend from "../Chart/ChartLegend";
-import { getArrow } from "@/data/getData";
-import LevelView from "../LevelsView";
+
 import DiagnosisStats from "./DiagnosisStats";
 
 
-const DiagnosisHistory = (props) => {
+const DiagnosisHistory = async ({serwerData}) => {
+
+    let lastDiagnosis = serwerData.diagnosis_history[0];
+
     return (
         <div className="w-full grid grid-cols-3 gap-5  bg-white rounded-xl pb-5 mb-8 diagnosis-height">
 
@@ -22,11 +19,11 @@ const DiagnosisHistory = (props) => {
             <div className="mt18 col-span-full bg-secRow-violet mx18 rounded-xl p-4 ">
                 <p className="inner-card-title-22pt  ">Blood Pressure</p>
                 <div className={`w-full flex justify-center items-start `} >
-                    <BloodChart serwerData={props.serwerData && props.serwerData} />
-                    <ChartLegend serwerData={props.serwerData && props.serwerData} />
+                    <BloodChart serwerData={serwerData} />
+                    <ChartLegend serwerData={serwerData} />
                 </div>
             </div>
-            <DiagnosisStats />
+            <DiagnosisStats lastDiagnosis={lastDiagnosis}/>
   
         </div>
     );

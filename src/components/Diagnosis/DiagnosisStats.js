@@ -6,19 +6,11 @@ import HeartBPM from "@public/HeartBPM.svg";
 
 import Loading from '../Loading';
 
-import CardTitle from "@/components/CardTitle";
-import BloodChart from "../Chart/BloodChart";
-import ChartLegend from "../Chart/ChartLegend";
-import { getArrow, getOnePatient } from "@/data/getData";
-import LevelView from "../LevelsView";
 import DiagnosisItem from "./DiagnosisItem";
 
-const DiagnosisStats = async () => {
+const DiagnosisStats = async ({lastDiagnosis}) => {
 
-    let lastDiagnosis = await getOnePatient('Jessica Taylor').then(res => {
-        console.log(res)
-        return res.diagnosis_history[0]
-    });
+ 
 
     return (
         <div className="w-full grid grid-cols-3 gap-5 col-span-full">

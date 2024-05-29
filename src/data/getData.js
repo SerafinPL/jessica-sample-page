@@ -2,11 +2,6 @@
 
 import axios from "axios";
 
-import ArrowUp from "@public/ArrowUp.svg";
-import ArrowDown from "@public/ArrowDown.svg";
-import Image from 'next/image';
-
-
 
 export const getPatients = async () => {
 
@@ -26,12 +21,4 @@ export const getOnePatient = async (name) => {
         return res.data.find(patient => patient.name == name);
     }, err => console.log(err))
 
-}
-
-export const getArrow = (arrow) => {
-    return arrow === 'Lower than Average' ?
-        <Image src={ArrowDown} /> :
-        arrow === 'Higher than Average' ?
-            <Image src={ArrowUp} /> :
-            '';
 }
