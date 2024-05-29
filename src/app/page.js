@@ -24,14 +24,14 @@ export default async function Home() {
 
     <div className="w-full grid grid-cols-4 gap-4 px18 radius70">
       <div className="mt18 row-span-full">
-        <PatientsList />
+        <PatientsList serwerPatientsData={serwerPatientsData}/>
       </div>
       <div className="col-span-2 mt18">
-        <DiagnosisHistory serwerData={serwerData && serwerData} />
-        <DiagnosticList serwerData={serwerData && serwerData} />
+        <DiagnosisHistory serwerData={serwerData} />
+        <DiagnosticList serwerData={serwerData} />
       </div>
       <div className="">
-        <PatientInfo user={serwerData && serwerData}/>
+        <PatientInfo user={serwerData}/>
         <LabResults  />
       </div>
     </div>
