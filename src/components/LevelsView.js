@@ -1,3 +1,4 @@
+'use client'
 
 import { getArrow } from "@/components/arrows"
 

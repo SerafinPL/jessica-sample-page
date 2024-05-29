@@ -7,13 +7,15 @@ import { getOnePatient } from '@/data/getData';
 
 import ChartCard from "./ChartCard";
 
-const ChartLegend = async () => {
+const ChartLegend = async (props) => {
+
+    const lastDiagnosis = props.serwerData.diagnosis_history[0];
 
 
-    let lastDiagnosis = await getOnePatient('Jessica Taylor').then(res => {
-        console.log(res)
-        return res.diagnosis_history[0]
-    });
+    // let lastDiagnosis = await getOnePatient('Jessica Taylor').then(res => {
+    //     console.log(res)
+    //     return res.diagnosis_history[0]
+    // });
 
 
     return (

@@ -6,7 +6,7 @@ import download from "@public/download.svg";
 
 
 const LabListView = ({ serwerData }) => {
-    console.log({ serwerData });
+    // console.log({ serwerData });
 
     const listElements = serwerData.map(el => {
         return (<div className={`w-full grid grid-cols-7 h-full pl-4 py-2 rounded-xl ${el === 'CT Scans' ? 'bg-firstRow-A1' :''}`}>

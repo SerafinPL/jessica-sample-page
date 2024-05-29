@@ -8,7 +8,7 @@ const BloodChart = async (props) => {
 
     return (
         <Suspense fallback={<Loading />}>
-            <PatientChart data={props.serwerData && props.serwerData} />
+            <PatientChart data={props.serwerData} />
         </Suspense>
     )
 };

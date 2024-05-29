@@ -11,7 +11,6 @@ const PatientChart = (props) => {
             data: props.data.diagnosis_history.map(els => (`${+els.blood_pressure.systolic.value}`)),
         }
     ];
-    console.log(props);
 
     const options = {
         chart: {
@@ -32,8 +31,6 @@ const PatientChart = (props) => {
         },
         colors:['#C26EB4', '#7E6CAB']
     }
-
-
 
     return (<Chart
         options={options}

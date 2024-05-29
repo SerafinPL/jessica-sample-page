@@ -8,7 +8,7 @@ import DiagnosisStats from "./DiagnosisStats";
 
 const DiagnosisHistory = async ({serwerData}) => {
 
-    let lastDiagnosis = serwerData.diagnosis_history[0];
+    // let lastDiagnosis = serwerData.diagnosis_history[0];
 
     return (
         <div className="w-full grid grid-cols-3 gap-5  bg-white rounded-xl pb-5 mb-8 diagnosis-height">
@@ -23,7 +23,7 @@ const DiagnosisHistory = async ({serwerData}) => {
                     <ChartLegend serwerData={serwerData} />
                 </div>
             </div>
-            <DiagnosisStats lastDiagnosis={lastDiagnosis}/>
+            <DiagnosisStats serwerData={serwerData}/>
   
         </div>
     );

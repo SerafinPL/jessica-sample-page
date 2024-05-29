@@ -1,14 +1,12 @@
 'use client'
 import LevelView from "../LevelsView";
 
-const DiagnosisItem = ({levels, value}) => {
-
-
+const DiagnosisItem = (props) => {
 
     return (
         <div >
-            <p className="card-extraBold-title-30 ml-4">{value} bpm</p>
-            <LevelView levels={levels} />
+            <p className="card-extraBold-title-30 ml-4">{props.value} bpm</p>
+            <LevelView levels={props.levels} />
         </div>
     );
 }
