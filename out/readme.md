@@ -1,11 +1,7 @@
-```
 
-npm run dev
 ```
-
-or
-```
-
+cd .. 
+npm install
 npm run build
 npx serve out
 ```
