@@ -11,17 +11,6 @@ import ApexChart from "./AppexChart";
 
 const PatientChart =( {data}) => {
 
-    // const [stateData, setStateData] = useState(data);
-
-    // useEffect(() => {
-    //     getOnePatient('Jessica Taylor').then(res => {
-
-    //         console.log("this is PatientChart message");
-    //         console.log(res);
-    //         setStateData(res)
-    //     })
-    // }, []);
-
     const series = [
         {
             data: data?.diagnosis_history.map(els => (`${+els.blood_pressure.diastolic.value}`)),
@@ -50,10 +39,6 @@ const PatientChart =( {data}) => {
         },
         colors: ['#C26EB4', '#7E6CAB']
     }
-
-
-    console.log(data);
-
     return (
         <div className="mixed-chart">
                 <ApexChart
@@ -61,6 +46,7 @@ const PatientChart =( {data}) => {
                     series={series}
                     type="line"
                     width="450"
+
                 />
         </div>
     )

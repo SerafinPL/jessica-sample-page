@@ -9,7 +9,6 @@ const BloodChart = async () => {
 
      let serwerData = await getOnePatient('Jessica Taylor').then(res => {
  
-      console.log("this is BloodChart message",{res});
       return res 
     
   });
