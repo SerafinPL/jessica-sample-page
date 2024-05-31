@@ -1,11 +1,17 @@
+**to install**
+```
+npm install
 ```
 
+**after installation**
+
+
+```
 npm run dev
 ```
 
-or
+**or**
 ```
-
 npm run build
 npx serve out
 ```
