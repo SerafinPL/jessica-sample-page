@@ -1,25 +1,33 @@
 'use client'
-
-import { Suspense } from "react";
+import { Suspense, useState, useEffect } from "react";
 
 import Loading from '../Loading';
 
-import dynamic from 'next/dynamic'
+
+import { getOnePatient } from '@/data/getData';
 
 
+import ApexChart from "./AppexChart";
 
-const PatientChart = ({ data }) => {
+const PatientChart =( {data}) => {
 
+    // const [stateData, setStateData] = useState(data);
 
+    // useEffect(() => {
+    //     getOnePatient('Jessica Taylor').then(res => {
 
-    const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
+    //         console.log("this is PatientChart message");
+    //         console.log(res);
+    //         setStateData(res)
+    //     })
+    // }, []);
 
     const series = [
         {
-            data: data.diagnosis_history.map(els => (`${+els.blood_pressure.diastolic.value}`)),
+            data: data?.diagnosis_history.map(els => (`${+els.blood_pressure.diastolic.value}`)),
         },
         {
-            data: data.diagnosis_history.map(els => (`${+els.blood_pressure.systolic.value}`)),
+            data: data?.diagnosis_history.map(els => (`${+els.blood_pressure.systolic.value}`)),
         }
     ];
 
@@ -38,23 +46,22 @@ const PatientChart = ({ data }) => {
             size: 5,
         },
         xaxis: {
-            categories: data.diagnosis_history.map(els => (`${els.month.slice(0, 3)}, ${els.year}`)),
+            categories:  data?.diagnosis_history.map(els => (`${els.month.slice(0, 3)}, ${els.year}`)),
         },
         colors: ['#C26EB4', '#7E6CAB']
     }
 
+
+    console.log(data);
+
     return (
         <div className="mixed-chart">
-            <Suspense fallback={<Loading />}>
-              {data &&  <Chart
+                <ApexChart
                     options={options}
                     series={series}
                     type="line"
                     width="450"
-                    
-                />}
-            </Suspense>
-
+                />
         </div>
     )
 };
