@@ -21,7 +21,7 @@ const DiagnosisStats = async () => {
                 <Image src={respiratoryRate} className='m-4' />
                 <p className="card-medium-title-16 ml-4">Respiratory Rate</p>
                 <Suspense fallback={<Loading />}>
-                    <DiagnosisItem levels={lastDiagnosis.respiratory_rate.levels} value={lastDiagnosis.respiratory_rate.value} />
+                    <DiagnosisItem levels={lastDiagnosis && lastDiagnosis.respiratory_rate.levels} value={lastDiagnosis && lastDiagnosis.respiratory_rate.value} />
                 </Suspense>
 
             </div>
@@ -29,14 +29,14 @@ const DiagnosisStats = async () => {
                 <Image src={temperature} className='m-4' />
                 <p className="card-medium-title-16 ml-4">Temperature</p>
                 <Suspense fallback={<Loading />}>
-                    <DiagnosisItem levels={lastDiagnosis.temperature.levels} value={lastDiagnosis.temperature.value} />
+                    <DiagnosisItem levels={lastDiagnosis && lastDiagnosis.temperature.levels} value={lastDiagnosis && lastDiagnosis.temperature.value} />
                 </Suspense>
             </div>
             <div className="rounded-xl bg-secRow-cardViolet mr18">
                 <Image src={HeartBPM} className='m-4' />
                 <p className="card-medium-title-16 ml-4">Heart Rate</p>
                 <Suspense fallback={<Loading />}>
-                    <DiagnosisItem levels={lastDiagnosis.heart_rate.levels} value={lastDiagnosis.heart_rate.value} />
+                    <DiagnosisItem levels={lastDiagnosis && lastDiagnosis.heart_rate.levels} value={lastDiagnosis && lastDiagnosis.heart_rate.value} />
                 </Suspense>
 
             </div>
