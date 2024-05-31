@@ -1,7 +1,6 @@
 
 import axios from "axios";
 
-
 export const getPatients = async () => {
 
     let auth = btoa(`${process.env.USER_LOGIN}:${process.env.PASS}`);

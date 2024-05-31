@@ -1,14 +1,25 @@
 'use client'
 
-import Chart from "react-apexcharts";
+import { Suspense } from "react";
 
-const PatientChart = async (props) => {
+import Loading from '../Loading';
+
+import dynamic from 'next/dynamic'
+
+
+
+const PatientChart = ({ data }) => {
+
+
+
+    const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
+
     const series = [
         {
-            data: props.data.diagnosis_history.map(els => (`${+els.blood_pressure.diastolic.value}`)),
+            data: data.diagnosis_history.map(els => (`${+els.blood_pressure.diastolic.value}`)),
         },
         {
-            data: props.data.diagnosis_history.map(els => (`${+els.blood_pressure.systolic.value}`)),
+            data: data.diagnosis_history.map(els => (`${+els.blood_pressure.systolic.value}`)),
         }
     ];
 
@@ -18,7 +29,7 @@ const PatientChart = async (props) => {
         },
         legend: {
             show: false
-          },
+        },
         stroke: {
             curve: 'smooth',
             width: 2,
@@ -27,17 +38,25 @@ const PatientChart = async (props) => {
             size: 5,
         },
         xaxis: {
-            categories: props.data.diagnosis_history.map(els => (`${els.month.slice(0, 3)}, ${els.year}`)),
+            categories: data.diagnosis_history.map(els => (`${els.month.slice(0, 3)}, ${els.year}`)),
         },
-        colors:['#C26EB4', '#7E6CAB']
+        colors: ['#C26EB4', '#7E6CAB']
     }
 
-    return (<Chart
-        options={options}
-        series={series}
-        type="line"
-        width="450"
-    />)
+    return (
+        <div className="mixed-chart">
+            <Suspense fallback={<Loading />}>
+              {data &&  <Chart
+                    options={options}
+                    series={series}
+                    type="line"
+                    width="450"
+                    
+                />}
+            </Suspense>
+
+        </div>
+    )
 };
 
 export default PatientChart

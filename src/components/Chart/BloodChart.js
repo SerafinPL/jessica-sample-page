@@ -1,8 +1,6 @@
 import { Suspense } from "react";
 
-import { getOnePatient, getPatients } from '@/data/getData';
-
-
+import { getOnePatient} from '@/data/getData';
 import Loading from '../Loading';
 
 import PatientChart from "./Chart";
@@ -11,7 +9,7 @@ const BloodChart = async () => {
 
      let serwerData = await getOnePatient('Jessica Taylor').then(res => {
  
-      console.log("this is the second message");
+      console.log("this is BloodChart message");
       return res 
     
   });
