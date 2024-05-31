@@ -1,5 +1,15 @@
 
-const ListView = ({ serwerData }) => {
+import { getOnePatient, getPatients } from '@/data/getData';
+
+
+const ListView = async () => {
+
+    let serwerData = await getOnePatient('Jessica Taylor').then(res => {
+ 
+        console.log("this is .diagnostic_list message");
+        return res.diagnostic_list 
+      
+    });
 
     const listElements = serwerData.map(el => {
         return (<div className={`w-full grid grid-cols-7 h-full pt-4 pl-5 `}>

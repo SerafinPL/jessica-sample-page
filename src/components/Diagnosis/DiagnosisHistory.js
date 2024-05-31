@@ -2,13 +2,11 @@
 import CardTitle from "@/components/CardTitle";
 import BloodChart from "../Chart/BloodChart";
 import ChartLegend from "../Chart/ChartLegend";
-
 import DiagnosisStats from "./DiagnosisStats";
 
 
-const DiagnosisHistory = async ({serwerData}) => {
+const DiagnosisHistory = async () => {
 
-    // let lastDiagnosis = serwerData.diagnosis_history[0];
 
     return (
         <div className="w-full grid grid-cols-3 gap-5  bg-white rounded-xl pb-5 mb-8 diagnosis-height">
@@ -19,11 +17,11 @@ const DiagnosisHistory = async ({serwerData}) => {
             <div className="mt18 col-span-full bg-secRow-violet mx18 rounded-xl p-4 ">
                 <p className="inner-card-title-22pt  ">Blood Pressure</p>
                 <div className={`w-full flex justify-center items-start `} >
-                    <BloodChart serwerData={serwerData} />
-                    <ChartLegend serwerData={serwerData} />
+                    <BloodChart />
+                    <ChartLegend  />
                 </div>
             </div>
-            <DiagnosisStats serwerData={serwerData}/>
+            <DiagnosisStats />
   
         </div>
     );

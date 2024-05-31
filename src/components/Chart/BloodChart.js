@@ -1,14 +1,24 @@
 import { Suspense } from "react";
 
+import { getOnePatient, getPatients } from '@/data/getData';
+
+
 import Loading from '../Loading';
 
 import PatientChart from "./Chart";
 
-const BloodChart = async (props) => {
+const BloodChart = async () => {
+
+     let serwerData = await getOnePatient('Jessica Taylor').then(res => {
+ 
+      console.log("this is the second message");
+      return res 
+    
+  });
 
     return (
         <Suspense fallback={<Loading />}>
-            <PatientChart data={props.serwerData} />
+            <PatientChart data={serwerData} />
         </Suspense>
     )
 };

@@ -37,9 +37,7 @@ const PatientChart = (props) => {
         series={series}
         type="line"
         width="450"
-    />
-
-    )
+    />)
 };
 
 export default PatientChart

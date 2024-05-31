@@ -1,4 +1,7 @@
 import Image from 'next/image';
+import { getOnePatient, getPatients } from '@/data/getData';
+
+
 import PatientIcoText from './PatientIcoText';
 
 import FemaleIcon from "@public/FemaleIcon.svg";
@@ -7,7 +10,14 @@ import PhoneIcon from "@public/PhoneIcon.svg";
 import BirthIcon from "@public/BirthIcon.svg";
 
 
-const PatientInfo = ({ user }) => {
+const PatientInfo = async () => {
+
+    let user = await getOnePatient('Jessica Taylor').then(res => {
+ 
+        console.log("this is user message");
+        return res
+      
+    });
 
     const gender = user.gender == 'Male' ? MaleIcon : FemaleIcon;  
 

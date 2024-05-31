@@ -7,34 +7,33 @@ import DiagnosisHistory from "@/components/Diagnosis/DiagnosisHistory";
 import DiagnosticList from "@/components/Diagnosis/DiagnosticList";
 import LabResults from "@/components/LabResults";
 
-const reavlidate = 1800;
 
 export default async function Home() {
 
-  let serwerData = await getOnePatient('Jessica Taylor').then(res => {
+  // let serwerData = await getOnePatient('Jessica Taylor').then(res => {
  
-      console.log("this is the second message");
-      return res 
+  //     console.log("this is the second message");
+  //     return res 
     
-  });
+  // });
 
-  let serwerAllPatientsData = await getPatients().then(res => {
-    // console.log(res);
-    return res
-  });
+  // let serwerAllPatientsData = await getPatients().then(res => {
+  //   // console.log(res);
+  //   return res
+  // });
 
   return (
 
     <div className="w-full grid grid-cols-4 gap-4 px18 radius70">
       <div className="mt18 row-span-full">
-        <PatientsList serwerPatientsData={serwerAllPatientsData}/>
+        <PatientsList />
       </div>
       <div className="col-span-2 mt18">
-        <DiagnosisHistory serwerData={serwerData} />
-        <DiagnosticList serwerData={serwerData} />
+        <DiagnosisHistory  />
+        <DiagnosticList  />
       </div>
       <div className="">
-        <PatientInfo user={serwerData}/>
+        <PatientInfo />
         <LabResults  />
       </div>
     </div>

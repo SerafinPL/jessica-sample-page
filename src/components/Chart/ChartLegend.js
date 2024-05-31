@@ -1,26 +1,12 @@
-
 import { Suspense } from "react";
 
 import Loading from '../Loading';
-import { getOnePatient } from '@/data/getData';
-
-
 import ChartCard from "./ChartCard";
 
-const ChartLegend = async (props) => {
-
-    const lastDiagnosis = props.serwerData.diagnosis_history[0];
-
-
-    // let lastDiagnosis = await getOnePatient('Jessica Taylor').then(res => {
-    //     console.log(res)
-    //     return res.diagnosis_history[0]
-    // });
-
+const ChartLegend = () => {
 
     return (
         <div className={`w-full  flex flex-col justify-start items-start max-w-[200px] mx-auto `} >
-
             <div>
                 <div className="inline-flex  items-center">
                     <span className="size-2 inline-block bg-thrRow-chartBlue rounded-full me-2"></span>
@@ -28,7 +14,7 @@ const ChartLegend = async (props) => {
 
                 </div>
                 <Suspense fallback={<Loading />}>
-                    <ChartCard title='Systolic' lastDiagnosis={lastDiagnosis} />
+                    <ChartCard title='Systolic' />
                 </Suspense>
             </div>
             <hr className="border-secRow-chartGrey w-full m-2" />
@@ -39,7 +25,7 @@ const ChartLegend = async (props) => {
 
                 </div>
                 <Suspense fallback={<Loading />}>
-                    <ChartCard title='Diastolic' lastDiagnosis={lastDiagnosis} />
+                    <ChartCard title='Diastolic' />
                 </Suspense>
             </div>
         </div>
