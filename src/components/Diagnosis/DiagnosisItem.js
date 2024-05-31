@@ -1,5 +1,5 @@
 import { getOnePatient } from '@/data/getData'; 
-import LevelView from "../LevelsView";
+import LevelView from "../Chart/LevelsView";
 
 const DiagnosisItem = async ({ value }) => {
 

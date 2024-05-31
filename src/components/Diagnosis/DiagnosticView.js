@@ -26,7 +26,6 @@ const ListView = async () => {
         [&::-webkit-scrollbar-track]:rounded-full
         [&::-webkit-scrollbar-thumb]:bg-firstRow-A5
         [&::-webkit-scrollbar-thumb]:rounded-full"`}>
-
             {listElements}
         </div>
     )
