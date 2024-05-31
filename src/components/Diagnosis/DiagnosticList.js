@@ -5,7 +5,7 @@ import Loading from "../Loading";
 import CardTitle from "@/components/CardTitle";
 import ListView from "./DiagnosticView";
 
-const DiagnosticList = (props) => {
+const DiagnosticList = () => {
 
     return (
         <div className="flex flex-col bg-white rounded-xl max-h-[300px] overflow-y-hidden	 ">
@@ -19,7 +19,7 @@ const DiagnosticList = (props) => {
                     <div className={`col-span-1 `}>Status</div>
                 </div>
                 <Suspense fallback={<Loading />}>
-                    <ListView serwerData={props.serwerData && props.serwerData.diagnostic_list} />
+                    <ListView  />
                 </Suspense>
             </div>
         </div>

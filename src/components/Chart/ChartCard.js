@@ -7,7 +7,11 @@ import LevelsView from "../LevelsView";
 const ChartCard = async ({title}) => {
 
     let lastDiagnosis = await getOnePatient('Jessica Taylor').then(res => {
-        console.log('ChartCard')
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+              resolve(res.diagnosis_history[0]);
+            }, 2500);
+          });  
         return res.diagnosis_history[0]
     });
     

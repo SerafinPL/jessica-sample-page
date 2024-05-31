@@ -1,3 +1,5 @@
+import { Suspense } from "react";
+import Loading from '../Loading';
 
 import CardTitle from "@/components/CardTitle";
 import BloodChart from "../Chart/BloodChart";
@@ -18,11 +20,15 @@ const DiagnosisHistory = async () => {
                 <p className="inner-card-title-22pt  ">Blood Pressure</p>
                 <div className={`w-full flex justify-center items-start `} >
                     <BloodChart />
-                    <ChartLegend  />
+                    <ChartLegend />
                 </div>
             </div>
-            <DiagnosisStats />
-  
+            {/* <Suspense fallback={<Loading />}> */}
+
+                <DiagnosisStats />
+            {/* </Suspense> */}
+
+
         </div>
     );
 }

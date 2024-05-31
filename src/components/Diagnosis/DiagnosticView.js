@@ -1,14 +1,15 @@
 
-import { getOnePatient, getPatients } from '@/data/getData';
-
+import { getOnePatient} from '@/data/getData';
 
 const ListView = async () => {
 
     let serwerData = await getOnePatient('Jessica Taylor').then(res => {
- 
-        console.log("this is .diagnostic_list message");
-        return res.diagnostic_list 
-      
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+              resolve(res.diagnostic_list);
+            }, 2500);
+          });  
+        return res.diagnostic_list
     });
 
     const listElements = serwerData.map(el => {
@@ -25,7 +26,7 @@ const ListView = async () => {
         [&::-webkit-scrollbar-track]:rounded-full
         [&::-webkit-scrollbar-thumb]:bg-firstRow-A5
         [&::-webkit-scrollbar-thumb]:rounded-full"`}>
-     
+
             {listElements}
         </div>
     )
