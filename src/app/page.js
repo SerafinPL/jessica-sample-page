@@ -2,25 +2,13 @@
 import { getOnePatient, getPatients } from '@/data/getData';
 
 import PatientsList from "@/components/PatientsList/PatientsList";
-import PatientInfo from '@/components/PatientInfo';
+import PatientInfo from '@/components/PatientInfo/PatientInfo';
 import DiagnosisHistory from "@/components/Diagnosis/DiagnosisHistory";
 import DiagnosticList from "@/components/Diagnosis/DiagnosticList";
-import LabResults from "@/components/LabResults";
+import LabResults from "@/components/LabResults/LabResults";
 
 
 export default async function Home() {
-
-  // let serwerData = await getOnePatient('Jessica Taylor').then(res => {
- 
-  //     console.log("this is the second message");
-  //     return res 
-    
-  // });
-
-  // let serwerAllPatientsData = await getPatients().then(res => {
-  //   // console.log(res);
-  //   return res
-  // });
 
   return (
 

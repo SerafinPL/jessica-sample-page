@@ -14,7 +14,6 @@ const PatientInfo = async () => {
 
     let user = await getOnePatient('Jessica Taylor').then(res => {
         return res
-
     });
 
     const gender = user.gender == 'Male'

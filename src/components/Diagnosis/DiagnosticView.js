@@ -4,11 +4,6 @@ import { getOnePatient} from '@/data/getData';
 const ListView = async () => {
 
     let serwerData = await getOnePatient('Jessica Taylor').then(res => {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-              resolve(res.diagnostic_list);
-            }, 2500);
-          });  
         return res.diagnostic_list
     });
 
