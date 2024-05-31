@@ -8,8 +8,6 @@ import DiagnosisStats from "./DiagnosisStats";
 
 
 const DiagnosisHistory = async () => {
-
-
     return (
         <div className="w-full grid grid-cols-3 gap-5  bg-white rounded-xl pb-5 mb-8 diagnosis-height">
 
@@ -23,12 +21,7 @@ const DiagnosisHistory = async () => {
                     <ChartLegend />
                 </div>
             </div>
-            {/* <Suspense fallback={<Loading />}> */}
-
-                <DiagnosisStats />
-            {/* </Suspense> */}
-
-
+            <DiagnosisStats />
         </div>
     );
 }

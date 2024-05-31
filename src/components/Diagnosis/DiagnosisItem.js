@@ -1,14 +1,13 @@
-import { getOnePatient } from '@/data/getData'; 
+'use client'
+
+
+import { getOnePatient } from '@/data/getData';
 import LevelView from "../Chart/LevelsView";
 
 const DiagnosisItem = async ({ value }) => {
 
     let view = await getOnePatient('Jessica Taylor').then(res => {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-              resolve(res.diagnosis_history[0][value]);
-            }, 2500);
-          });         
+        return res.diagnosis_history[0][value];
     });
 
     return (

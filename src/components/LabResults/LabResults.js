@@ -10,7 +10,6 @@ import LabListView from "./LabResultsView";
 const LabResults = async () => {
 
     let lastDiagnosis = await getOnePatient('Jessica Taylor').then(res => {
-        // console.log(res)
         return res
     });
 

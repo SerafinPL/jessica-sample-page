@@ -1,4 +1,4 @@
-
+'use client'
 import { getOnePatient } from '@/data/getData';
 
 import LevelsView from "./LevelsView";

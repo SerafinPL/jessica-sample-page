@@ -1,3 +1,4 @@
+'use client'
 
 import { getOnePatient} from '@/data/getData';
 
