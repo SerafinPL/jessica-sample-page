@@ -7,7 +7,7 @@ import DiagnosisHistory from "@/components/Diagnosis/DiagnosisHistory";
 import DiagnosticList from "@/components/Diagnosis/DiagnosticList";
 import LabResults from "@/components/LabResults/LabResults";
 
-export default async function Home() {
+export default  function Home() {
 
   return (
 
@@ -21,7 +21,7 @@ export default async function Home() {
       </div>
       <div className="">
         <Suspense fallback={<PatientInfoSkeleton />}>
-          <PatientInfoSkeleton />
+          <PatientInfo />
         </Suspense>
         <LabResults />
       </div>

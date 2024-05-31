@@ -19,7 +19,7 @@ export const getOnePatient = async (name) => {
     return await axios.get(process.env.PATH_URL, { headers: { 'Authorization': `Basic ${auth}` } }).then(res => {
         //     return new Promise((resolve, reject) => {
         //     setTimeout(() => {
-        //       resolve(res.diagnosis_history[0][value]);
+        //       resolve(res.data.find(patient => patient.name == name));
         //     }, 2500);
         //   });  
         return res.data.find(patient => patient.name == name);

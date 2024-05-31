@@ -2,7 +2,6 @@
 import Image from 'next/image';
 import { getOnePatient } from '@/data/getData';
 
-
 import PatientIcoText from './PatientIcoText';
 
 import FemaleIcon from "@public/FemaleIcon.svg";
