@@ -1,12 +1,11 @@
-
-import { getOnePatient, getPatients } from '@/data/getData';
+import { Suspense } from 'react';
 
 import PatientsList from "@/components/PatientsList/PatientsList";
 import PatientInfo from '@/components/PatientInfo/PatientInfo';
+import PatientInfoSkeleton from '@/components/PatientInfo/PatientInfoSkeleton';
 import DiagnosisHistory from "@/components/Diagnosis/DiagnosisHistory";
 import DiagnosticList from "@/components/Diagnosis/DiagnosticList";
 import LabResults from "@/components/LabResults/LabResults";
-
 
 export default async function Home() {
 
@@ -17,12 +16,14 @@ export default async function Home() {
         <PatientsList />
       </div>
       <div className="col-span-2 mt18">
-        <DiagnosisHistory  />
-        <DiagnosticList  />
+        <DiagnosisHistory />
+        <DiagnosticList />
       </div>
       <div className="">
-        <PatientInfo />
-        <LabResults  />
+        <Suspense fallback={<PatientInfoSkeleton />}>
+          <PatientInfoSkeleton />
+        </Suspense>
+        <LabResults />
       </div>
     </div>
   );

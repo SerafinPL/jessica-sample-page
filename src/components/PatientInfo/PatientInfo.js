@@ -1,5 +1,6 @@
+
 import Image from 'next/image';
-import { getOnePatient, getPatients } from '@/data/getData';
+import { getOnePatient } from '@/data/getData';
 
 
 import PatientIcoText from './PatientIcoText';

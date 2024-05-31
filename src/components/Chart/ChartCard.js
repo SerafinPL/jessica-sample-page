@@ -1,4 +1,3 @@
-'use client'
 import { getOnePatient } from '@/data/getData';
 
 import LevelsView from "./LevelsView";
@@ -6,7 +5,7 @@ import LevelsView from "./LevelsView";
 
 const ChartCard = async ({title}) => {
 
-    let lastDiagnosis = await getOnePatient('Jessica Taylor').then(res => {
+    let lastDiagnosis = await getOnePatient('Jessica Taylor').then(res => {                
              return res.diagnosis_history[0]
     });
     

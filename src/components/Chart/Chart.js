@@ -2,7 +2,7 @@
 
 import Chart from "react-apexcharts";
 
-const PatientChart = (props) => {
+const PatientChart = async (props) => {
     const series = [
         {
             data: props.data.diagnosis_history.map(els => (`${+els.blood_pressure.diastolic.value}`)),

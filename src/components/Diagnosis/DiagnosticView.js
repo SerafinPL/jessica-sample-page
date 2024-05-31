@@ -1,5 +1,3 @@
-'use client'
-
 import { getOnePatient} from '@/data/getData';
 
 const ListView = async () => {
