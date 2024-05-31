@@ -1,7 +1,5 @@
 'use client'
 
-import Image from 'next/image';
-
 import PatientIcoText from './PatientIcoText';
 import PhoneIcon from "@public/PhoneIcon.svg";
 import BirthIcon from "@public/BirthIcon.svg";
@@ -11,7 +9,7 @@ const PatientInfoSkeleton = () => {
     return (
         <div className="flex flex-col bg-white rounded-xl mb-6 h-[740px] ">
             <div className="pt-8 mx-auto	">
-                {<Image width={200} height={200} className={``} />}
+                {<div className={`w-[200px] h-[200px]`}></div>}
                 {<p className="card-title-24pt text-center mt-6">{' '}</p>}
             </div>
 

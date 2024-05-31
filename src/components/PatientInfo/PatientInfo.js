@@ -9,7 +9,6 @@ import MaleIcon from "@public/MaleIcon.svg";
 import PhoneIcon from "@public/PhoneIcon.svg";
 import BirthIcon from "@public/BirthIcon.svg";
 
-
 const PatientInfo = async () => {
 
     let user = await getOnePatient('Jessica Taylor').then(res => {
