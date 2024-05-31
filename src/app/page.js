@@ -1,24 +1,13 @@
-
-import { getOnePatient, getPatients } from '@/data/getData';
+import { Suspense } from 'react';
 
 import PatientsList from "@/components/PatientsList/PatientsList";
-import PatientInfo from '@/components/PatientInfo';
+import PatientInfo from '@/components/PatientInfo/PatientInfo';
+import PatientInfoSkeleton from '@/components/PatientInfo/PatientInfoSkeleton';
 import DiagnosisHistory from "@/components/Diagnosis/DiagnosisHistory";
 import DiagnosticList from "@/components/Diagnosis/DiagnosticList";
-import LabResults from "@/components/LabResults";
+import LabResults from "@/components/LabResults/LabResults";
 
-const reavlidate = 1800;
-
-export default async function Home() {
-
-  let serwerData = await getOnePatient('Jessica Taylor').then(res => {
-    return res
-  });
-
-  let serwerAllPatientsData = await getPatients().then(res => {
-    console.log(res);
-    return res
-  });
+export default  function Home() {
 
   return (
 
@@ -27,12 +16,14 @@ export default async function Home() {
         <PatientsList />
       </div>
       <div className="col-span-2 mt18">
-        <DiagnosisHistory serwerData={serwerData && serwerData} />
-        <DiagnosticList serwerData={serwerData && serwerData} />
+        <DiagnosisHistory />
+        <DiagnosticList />
       </div>
       <div className="">
-        <PatientInfo user={serwerData && serwerData}/>
-        <LabResults serwerData={serwerData && serwerData} />
+        <Suspense fallback={<PatientInfoSkeleton />}>
+          <PatientInfo />
+        </Suspense>
+        <LabResults />
       </div>
     </div>
   );

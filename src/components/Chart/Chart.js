@@ -1,17 +1,24 @@
 'use client'
+import { Suspense, useState, useEffect } from "react";
 
-import Chart from "react-apexcharts";
+import Loading from '../Loading';
 
-const PatientChart = (props) => {
+
+import { getOnePatient } from '@/data/getData';
+
+
+import ApexChart from "./AppexChart";
+
+const PatientChart =( {data}) => {
+
     const series = [
         {
-            data: props.data.diagnosis_history.map(els => (`${+els.blood_pressure.diastolic.value}`)),
+            data: data?.diagnosis_history.map(els => (`${+els.blood_pressure.diastolic.value}`)),
         },
         {
-            data: props.data.diagnosis_history.map(els => (`${+els.blood_pressure.systolic.value}`)),
+            data: data?.diagnosis_history.map(els => (`${+els.blood_pressure.systolic.value}`)),
         }
     ];
-    console.log(props);
 
     const options = {
         chart: {
@@ -19,7 +26,7 @@ const PatientChart = (props) => {
         },
         legend: {
             show: false
-          },
+        },
         stroke: {
             curve: 'smooth',
             width: 2,
@@ -28,20 +35,20 @@ const PatientChart = (props) => {
             size: 5,
         },
         xaxis: {
-            categories: props.data.diagnosis_history.map(els => (`${els.month.slice(0, 3)}, ${els.year}`)),
+            categories:  data?.diagnosis_history.map(els => (`${els.month.slice(0, 3)}, ${els.year}`)),
         },
-        colors:['#C26EB4', '#7E6CAB']
+        colors: ['#C26EB4', '#7E6CAB']
     }
+    return (
+        <div className="mixed-chart">
+                <ApexChart
+                    options={options}
+                    series={series}
+                    type="line"
+                    width="450"
 
-
-
-    return (<Chart
-        options={options}
-        series={series}
-        type="line"
-        width="450"
-    />
-
+                />
+        </div>
     )
 };
 
