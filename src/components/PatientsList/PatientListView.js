@@ -9,7 +9,7 @@ const PatientListView = ({avatar, name, gender, age, active}) => (
             <p className="px-1 body-emphasized-14pt">{name && name}</p>
             <p className="px-1 body-secondary-info-14pt">{gender && gender}, {age && age}</p>
         </div>
-        <Image src={more} className={``} />
+        <Image src={more} />
     </div>
 );
 
