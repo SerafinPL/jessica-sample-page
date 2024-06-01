@@ -1,13 +1,11 @@
 
 import { Suspense } from "react";
-import Loading from "../Loading";
 
+import Loading from "../Loading";
 import CardTitle from "@/components/CardTitle";
 import ListView from "./DiagnosticView";
 
-const DiagnosticList = () => {
-
-    return (
+const DiagnosticList = () => (
         <div className="flex flex-col bg-white rounded-xl max-h-[300px] overflow-y-hidden	 ">
             <div className="mt18">
                 <CardTitle title='Diagnostic List'></CardTitle>
@@ -23,7 +21,6 @@ const DiagnosticList = () => {
                 </Suspense>
             </div>
         </div>
-    )
-};
+    );
 
 export default DiagnosticList

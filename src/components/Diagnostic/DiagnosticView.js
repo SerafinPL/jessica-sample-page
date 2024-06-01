@@ -1,6 +1,7 @@
-import { getOnePatient } from '@/data/getData';
-import BetterScrolls from '../BetterScrolls';
 
+import { getOnePatient } from '@/data/getData';
+
+import BetterScrolls from '../BetterScrolls';
 
 const ListView = async () => {
 

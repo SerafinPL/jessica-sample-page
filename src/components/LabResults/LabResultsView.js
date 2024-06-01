@@ -17,11 +17,9 @@ const LabListView = async () => {
         </div>)
     })
 
-    const biggerList = listElements.concat(listElements)
-
     return (      
             <BetterScrolls classes={'`w-full pb-4 pl-5 max-h-[259px]'}>
-                {biggerList}
+                {listElements}
             </BetterScrolls>
     )
 };
