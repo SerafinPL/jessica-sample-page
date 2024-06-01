@@ -24,7 +24,7 @@ const DiagnosisStats = async () => {
                 <Image src={temperature} className='m-4' />
                 <p className="card-medium-title-16 ml-4">Temperature</p>
                 <Suspense fallback={<Loading />}>
-                    <DiagnosisItem value={'temperature'} unit={'\u00B0'}/>
+                    <DiagnosisItem value={'temperature'} unit={'\u00B0 F'}/>
                 </Suspense>
             </div>
             <div className="rounded-xl bg-secRow-cardViolet mr18">

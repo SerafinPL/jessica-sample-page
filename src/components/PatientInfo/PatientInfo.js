@@ -11,9 +11,7 @@ import BirthIcon from "@public/BirthIcon.svg";
 
 const PatientInfo = async () => {
 
-    let user = await getOnePatient('Jessica Taylor').then(res => {
-        return res
-    });
+    let user = await getOnePatient('Jessica Taylor')
 
     const gender = user.gender == 'Male'
         ? MaleIcon
@@ -23,9 +21,8 @@ const PatientInfo = async () => {
 
     return (
         <div className="flex flex-col bg-white rounded-xl mb-6 h-[740px] ">
-
             <div className="pt-8 mx-auto	">
-                {user && <Image src={user.profile_picture} width={200} height={200} className={``} />}
+                {user && <Image src={user.profile_picture} width={200} height={200} />}
                 {user && <p className="card-title-24pt text-center mt-6">{user.name}</p>}
             </div>
             <PatientIcoText ico={BirthIcon} textDown={user.date_of_birth} textUp={'Date Of Birth'} />
