@@ -1,4 +1,7 @@
-import { getOnePatient} from '@/data/getData';
+
+import { getOnePatient } from '@/data/getData';
+
+import BetterScrolls from '../BetterScrolls';
 
 const ListView = async () => {
 
@@ -14,14 +17,10 @@ const ListView = async () => {
         </div>)
     })
 
-    return (
-        <div className={`w-full pb-4 pl-5 overflow-y-auto [&::-webkit-scrollbar]:w-1.5 max-h-[160px] 
-        [&::-webkit-scrollbar-track]:bg-firstRow-scrollFront
-        [&::-webkit-scrollbar-track]:rounded-full
-        [&::-webkit-scrollbar-thumb]:bg-firstRow-A5
-        [&::-webkit-scrollbar-thumb]:rounded-full"`}>
-            {listElements}
-        </div>
+    return (       
+            <BetterScrolls classes={'max-h-[160px] w-full pb-4 pl-5 '}>
+                {listElements}
+            </BetterScrolls>
     )
 };
 

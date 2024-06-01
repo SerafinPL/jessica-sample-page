@@ -1,17 +1,12 @@
 import { Suspense } from "react";
-
 import { getOnePatient} from '@/data/getData';
-import Loading from '../Loading';
 
+import Loading from '../Loading';
 import PatientChart from "./Chart";
 
 const BloodChart = async () => {
 
-     let serwerData = await getOnePatient('Jessica Taylor').then(res => {
- 
-      return res 
-    
-  });
+     let serwerData = await getOnePatient('Jessica Taylor');
 
     return (
         <Suspense fallback={<Loading />}>

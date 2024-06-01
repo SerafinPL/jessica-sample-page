@@ -1,15 +1,7 @@
-'use client'
-import { Suspense, useState, useEffect } from "react";
-
-import Loading from '../Loading';
-
-
-import { getOnePatient } from '@/data/getData';
-
 
 import ApexChart from "./AppexChart";
 
-const PatientChart =( {data}) => {
+const PatientChart = ({ data }) => {
 
     const series = [
         {
@@ -35,20 +27,16 @@ const PatientChart =( {data}) => {
             size: 5,
         },
         xaxis: {
-            categories:  data?.diagnosis_history.map(els => (`${els.month.slice(0, 3)}, ${els.year}`)),
+            categories: data?.diagnosis_history.map(els => (`${els.month.slice(0, 3)}, ${els.year}`)),
         },
         colors: ['#C26EB4', '#7E6CAB']
     }
     return (
-        <div className="mixed-chart">
-                <ApexChart
-                    options={options}
-                    series={series}
-                    type="line"
-                    width="450"
-
-                />
-        </div>
+        <ApexChart
+            options={options}
+            series={series}
+            type="line"
+            width="450" />
     )
 };
 

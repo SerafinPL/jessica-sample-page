@@ -17,21 +17,21 @@ const DiagnosisStats = async () => {
                 <Image src={respiratoryRate} className='m-4' />
                 <p className="card-medium-title-16 ml-4">Respiratory Rate</p>
                 <Suspense fallback={<Loading />}>
-                    <DiagnosisItem value={'respiratory_rate'} />
+                    <DiagnosisItem value={'respiratory_rate'} unit='bpm'/>
                 </Suspense>
             </div>
             <div className="rounded-xl bg-secRow-cardPink ">
                 <Image src={temperature} className='m-4' />
                 <p className="card-medium-title-16 ml-4">Temperature</p>
                 <Suspense fallback={<Loading />}>
-                    <DiagnosisItem value={'temperature'} />
+                    <DiagnosisItem value={'temperature'} unit={'\u00B0'}/>
                 </Suspense>
             </div>
             <div className="rounded-xl bg-secRow-cardViolet mr18">
                 <Image src={HeartBPM} className='m-4' />
                 <p className="card-medium-title-16 ml-4">Heart Rate</p>
                 <Suspense fallback={<Loading />}>
-                    <DiagnosisItem value={'heart_rate'} />
+                    <DiagnosisItem value={'heart_rate'} unit='bpm'/>
                 </Suspense>
             </div>
         </div>

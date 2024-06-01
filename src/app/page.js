@@ -4,7 +4,7 @@ import PatientsList from "@/components/PatientsList/PatientsList";
 import PatientInfo from '@/components/PatientInfo/PatientInfo';
 import PatientInfoSkeleton from '@/components/PatientInfo/PatientInfoSkeleton';
 import DiagnosisHistory from "@/components/Diagnosis/DiagnosisHistory";
-import DiagnosticList from "@/components/Diagnosis/DiagnosticList";
+import DiagnosticList from "@/components/Diagnostic/DiagnosticList";
 import LabResults from "@/components/LabResults/LabResults";
 
 export default  function Home() {
