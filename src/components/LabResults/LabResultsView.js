@@ -18,7 +18,7 @@ const LabListView = async () => {
     })
 
     return (      
-            <BetterScrolls classes={'`w-full pb-4 pl-5 max-h-[259px]'}>
+            <BetterScrolls classes={'`w-full pb-4 px-5 max-h-[259px]'}>
                 {listElements}
             </BetterScrolls>
     )
