@@ -4,11 +4,9 @@ import BloodChart from "../Chart/BloodChart";
 import ChartLegend from "../Chart/ChartLegend";
 import DiagnosisStats from "./DiagnosisStats";
 
-
 const DiagnosisHistory = async () => {
     return (
-        <div className="w-full grid grid-cols-3 gap-5  bg-white rounded-xl pb-5 mb-8 diagnosis-height">
-
+        <div className="w-full grid grid-cols-3 gap-5  bg-white rounded-xl pb-5 mb-8 h-[720px]">
             <div className="mt18 col-span-full">
                 <CardTitle title='Diagnosis History'></CardTitle>
             </div>
