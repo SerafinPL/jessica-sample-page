@@ -1,15 +1,22 @@
 
+import { getPatients} from '@/data/getData';
 
 import CardTitle from "@/components/CardTitle";
 import PatientListView from "./PatientListView";
 import search from "@public/search.svg";
 import { patients } from "@/data/Patients";
 
-const PatientsList = (props) => {
+const PatientsList = async () => {
 
-    const viewElements = patients.map(el => (
-        <PatientListView avatar={el.avatar} name={el.name} gender={el.gender} age={el.age} active={el.active}/>
-    ))
+    // const viewElements = patients.map(el => (
+    //     <PatientListView avatar={el.avatar} name={el.name} gender={el.gender} age={el.age} active={el.active}/>
+    // ))
+
+    const viewElements = await getPatients().then(res => {
+        return res.map(el => (
+            <PatientListView avatar={el.profile_picture} name={el.name} gender={el.gender} age={el.age} active={el.name == 'Jessica Taylor'}/>
+        ))
+    })
 
     const extendedElements = viewElements.concat(viewElements).concat(viewElements).concat(viewElements);
 

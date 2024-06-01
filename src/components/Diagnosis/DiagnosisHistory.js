@@ -1,5 +1,3 @@
-import { Suspense } from "react";
-import Loading from '../Loading';
 
 import CardTitle from "@/components/CardTitle";
 import BloodChart from "../Chart/BloodChart";
