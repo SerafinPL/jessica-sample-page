@@ -31,13 +31,12 @@ const PatientChart = ({ data }) => {
         },
         colors: ['#C26EB4', '#7E6CAB']
     }
-    return (
-        <ApexChart
-            options={options}
-            series={series}
-            type="line"
-            width="450" />
-    )
+    return (<ApexChart
+        options={options}
+        series={series}
+        type="line"
+        width="450" />
+        )
 };
 
 export default PatientChart

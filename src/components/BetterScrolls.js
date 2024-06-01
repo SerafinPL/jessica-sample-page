@@ -1,5 +1,4 @@
 
-
 const BetterScrolls = ({ children, classes }) => (
     <div className={`overflow-y-auto [&::-webkit-scrollbar]:w-1.5
                 [&::-webkit-scrollbar-track]:bg-firstRow-scrollFront
